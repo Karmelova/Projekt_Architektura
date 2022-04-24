@@ -28,7 +28,7 @@ body {
     color: (--valueInputColor);
 }
 
-.istruction_button {
+.instruction_button {
     border: none;
     background-color: var(--subcolor);
     margin-top: 5px;
