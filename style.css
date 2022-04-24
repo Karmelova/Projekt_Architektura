@@ -1,16 +1,20 @@
-:root{
+:root {
     --valuesInputColor: #d1d1d1f5;
     --theme: #424242;
+    --subcolor: #4d8307;
 }
-body{
+
+body {
     margin: 0;
     background-color: var(--theme);
 }
-#registry{
+
+#registry {
     max-width: 200em;
     display: flex;
 }
-.registry_name{
+
+.registry_name {
     min-height: 10px;
     background-color: white;
     max-width: 40px;
@@ -18,8 +22,14 @@ body{
     padding: 4px;
     text-align: center;
 }
-.registry_value{
+
+.registry_value {
     background-color: var(--valueInputColor);
     color: (--valueInputColor);
+}
 
+.istruction_button {
+    border: none;
+    background-color: var(--subcolor);
+    margin-top: 5px;
 }
