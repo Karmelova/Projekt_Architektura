@@ -1,0 +1,25 @@
+:root{
+    --valuesInputColor: #d1d1d1f5;
+    --theme: #424242;
+}
+body{
+    margin: 0;
+    background-color: var(--theme);
+}
+#registry{
+    max-width: 200em;
+    display: flex;
+}
+.registry_name{
+    min-height: 10px;
+    background-color: white;
+    max-width: 40px;
+    display: flex;
+    padding: 4px;
+    text-align: center;
+}
+.registry_value{
+    background-color: var(--valueInputColor);
+    color: (--valueInputColor);
+
+}
