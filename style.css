@@ -1,7 +1,7 @@
 :root {
     --valuesInputColor: #d1d1d1f5;
     --theme: #424242;
-    --subcolor: #4d8307;
+    --subcolor: linear-gradient( #cbe6a9,  #4d8307);
 }
 
 body {
@@ -29,7 +29,22 @@ body {
 }
 
 .instruction_button {
-    border: none;
-    background-color: var(--subcolor);
+    
+    background: var(--subcolor);
+    
     margin-top: 5px;
+    border-radius: 999px;
+    box-shadow: var(--subcolor) 0 10px 20px -10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 14px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    border: 0;
 }
