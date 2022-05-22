@@ -1,0 +1,79 @@
+:root {
+  --theme: #7a7d7d;
+  --light: #fffbfe;
+  --sublight: #d0cfcf83;
+  --dark: #14080e;
+  --addons: #e4ff1a;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: var(--theme);
+  color: var(--light);
+}
+
+.register {
+  display: flex;
+  align-items: stretch;
+
+}
+
+input {
+  background-color: red;
+  border: none;
+}
+
+
+fieldset {
+  border-radius: 6px;
+  border-color: var(--dark);
+  border-width: 2px;
+  border-style: solid;
+  background-color: var(--sublight);
+  margin-bottom: 2vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
+}
+
+legend {
+  background-color: var(--dark);
+  border-radius: 10px;
+  min-height: 20px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 0 1em var(--dark);
+
+}
+
+span {
+  position: absolute;
+  font-size: 100%;
+
+}
+
+.instruction legend {
+  box-shadow: 0 0 1em var(--addons);
+  background-color: var(--addons);
+  color: var(--dark);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+select {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  display: flexbox;
+}

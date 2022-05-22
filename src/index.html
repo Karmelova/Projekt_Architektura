@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Processor 8068</title>
+</head>
+
+<body>
+    <main id="content">
+        <div class="registers">
+            <div class="register">
+                <fieldset>
+                    <legend><span>AX</span></legend>
+                    <input type="text" placeholder="0000" maxlength="4">
+                </fieldset>
+            </div>
+
+            <div class="register">
+                <fieldset>
+                    <legend><span>BX</span></legend>
+                    <input type="text">
+                </fieldset>
+            </div>
+
+            <div class="register">
+                <fieldset>
+                    <legend><span>CX</span></legend>
+                    <input type="text">
+                </fieldset>
+            </div>
+
+            <div class="register">
+                <fieldset>
+                    <legend><span>DX</span></legend>
+                    <input type="text">
+                </fieldset>
+            </div>
+        </div>
+
+        <div id="commands">
+
+            <div class="instruction">
+                <fieldset>
+                    <legend><button>MOV</button></legend>
+                    <form action="">
+                        <select id="MOV1">
+                            <option hidden value="0">FROM</option>
+                            <option value="1">AX</option>
+                            <option value="2">BX</option>
+                            <option value="3">CX</option>
+                            <option value="4">DX</option>
+                        </select>
+                        <select id="MOV2">
+                            <option hidden value="0">TO</option>
+                            <option value="1">AX</option>
+                            <option value="2">BX</option>
+                            <option value="3">CX</option>
+                            <option value="4">DX</option>
+                        </select>
+                    </form>
+                </fieldset>
+
+                <div class="instruction">
+                    <fieldset>
+                        <legend><button>XCHG</button></legend>
+                        <form action="">
+                            <select id="XCHG1">
+                                <option hidden value="0">FROM</option>
+                                <option value="1">AX</option>
+                                <option value="2">BX</option>
+                                <option value="3">CX</option>
+                                <option value="4">DX</option>
+                            </select>
+                            <select id="XCHG2">
+                                <option hidden value="0">TO</option>
+                                <option value="1">AX</option>
+                                <option value="2">BX</option>
+                                <option value="3">CX</option>
+                                <option value="4">DX</option>
+                            </select>
+                        </form>
+                    </fieldset>
+                </div>
+
+
+                <div class="instruction">
+                    <fieldset>
+                        <legend><button>PUSH</button></legend>
+                        <form action="">
+                            <label></label>
+                            <select id="PUSH1">
+                                <option hidden value="0">FROM</option>
+                                <option value="1">AX</option>
+                                <option value="2">BX</option>
+                                <option value="3">CX</option>
+                                <option value="4">DX</option>
+                            </select>
+                            <select id="PUSH2">
+                                <option hidden value="0">TO</option>
+                                <option value="1">AX</option>
+                                <option value="2">BX</option>
+                                <option value="3">CX</option>
+                                <option value="4">DX</option>
+                            </select>
+                        </form>
+                    </fieldset>
+                </div>
+
+                <div class="instruction">
+                    <fieldset>
+                        <legend><button>POP</button></legend>
+                        <form action="">
+                            <select id="POP1">
+                                <option hidden value="0">FROM</option>
+                                <option value="1">AX</option>
+                                <option value="2">BX</option>
+                                <option value="3">CX</option>
+                                <option value="4">DX</option>
+                            </select>
+                            <select id="POP2">
+                                <option hidden value="0">TO</option>
+                                <option value="1">AX</option>
+                                <option value="2">BX</option>
+                                <option value="3">CX</option>
+                                <option value="4">DX</option>
+                            </select>
+                        </form>
+                    </fieldset>
+                </div>
+
+
+            </div>
+
+
+    </main>
+
+
+</body>
+
+</html>
