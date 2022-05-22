@@ -5,8 +5,10 @@
   --dark: #7a7d7d;
   --lightdark: #424242;
   --addons: #e4ff1a;
+  --fontsizes: 120%;
 }
-::placeholder{
+
+::placeholder {
   color: var(--sublight);
 }
 
@@ -19,14 +21,47 @@
 body {
   background-color: var(--theme);
   color: var(--light);
+  font-size: var(--fontsizes);
 }
 
+.instruction select {
+  margin-bottom: 1vh;
+  background-color: transparent;
+  color: var(--sublight);
+  cursor: pointer;
+  box-shadow: none;
+  background-image: none;
+}
+.instruction select:focus{
+  outline: none;
+  box-shadow: none;
+  color: var(--light);
+  transition: 0.5s;
+}
+
+.instruction option {
+  background-color: var(--lightdark);
+}
+.form-select{
+  border: none;
+  text-align: center;
+  
+}
+.form-select:focus{
+  box-shadow: none;
+}
+button:focus{
+  box-shadow: 0 0 1em var(--addons);
+  transition: 0.5s;
+
+}
 input {
   background-color: transparent;
   border: none;
   text-align: center;
   color: var(--sublight);
   width: 100%;
+  margin-bottom: 1vh;
 }
 
 input:focus {
@@ -43,25 +78,28 @@ fieldset {
   border-color: var(--dark);
   background-color: var(--lightdark);
   margin-bottom: 2vh;
- 
+
 }
 
-fieldset:hover, fieldset:focus-within {
+fieldset:hover,
+fieldset:focus-within {
   box-shadow: 0 0 1em var(--addons);
   transition: 0.5s;
 }
 
 
 legend {
-  background-color: var(--dark); 
+  background-color: var(--dark);
   border-radius: 10px;
   justify-content: center;
   box-shadow: 0 0 1em var(--theme);
+  font-size: 100%;
+
 }
 
 
 .my-span {
-  
+
   font-size: 90%;
 }
 
