@@ -1,13 +1,19 @@
 :root {
-  --theme: #7a7d7d;
+  --theme: #18181b;
   --light: #fffbfe;
-  --sublight: #d0cfcf83;
-  --dark: #14080e;
+  --sublight: #a5a5a5;
+  --dark: #7a7d7d;
+  --lightdark: #424242;
   --addons: #e4ff1a;
 }
+::placeholder{
+  color: var(--sublight);
+}
+
 
 * {
   margin: 0;
+  outline: none;
 }
 
 body {
@@ -15,52 +21,52 @@ body {
   color: var(--light);
 }
 
-.register {
-  display: flex;
-  align-items: stretch;
-
-}
-
 input {
-  background-color: red;
+  background-color: transparent;
   border: none;
+  text-align: center;
+  color: var(--sublight);
+  width: 100%;
 }
+
+input:focus {
+  color: var(--light);
+  border: transparent;
+}
+
 
 
 fieldset {
   border-radius: 6px;
-  border-color: var(--dark);
   border-width: 2px;
   border-style: solid;
-  background-color: var(--sublight);
+  border-color: var(--dark);
+  background-color: var(--lightdark);
   margin-bottom: 2vh;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  position: relative;
+ 
 }
+
+fieldset:hover, fieldset:focus-within {
+  box-shadow: 0 0 1em var(--addons);
+  transition: 0.5s;
+}
+
 
 legend {
-  background-color: var(--dark);
+  background-color: var(--dark); 
   border-radius: 10px;
-  min-height: 20px;
-  min-width: 40px;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  position: relative;
-  box-shadow: 0 0 1em var(--dark);
-
+  box-shadow: 0 0 1em var(--theme);
 }
 
-span {
-  position: absolute;
-  font-size: 100%;
 
+.my-span {
+  
+  font-size: 90%;
 }
 
 .instruction legend {
-  box-shadow: 0 0 1em var(--addons);
+  box-shadow: 0 0 1em var(--dark);
   background-color: var(--addons);
   color: var(--dark);
 }
