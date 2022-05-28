@@ -32,7 +32,8 @@ body {
   box-shadow: none;
   background-image: none;
 }
-.instruction select:focus{
+
+.instruction select:focus {
   outline: none;
   box-shadow: none;
   color: var(--light);
@@ -42,19 +43,24 @@ body {
 .instruction option {
   background-color: var(--lightdark);
 }
-.form-select{
+
+.form-select {
   border: none;
   text-align: center;
-  
+
 }
-.form-select:focus{
+
+.form-select:focus {
   box-shadow: none;
 }
-button:focus{
+
+button:focus {
+  border-radius: 10px;
   box-shadow: 0 0 1em var(--addons);
   transition: 0.5s;
 
 }
+
 input {
   background-color: transparent;
   border: none;
@@ -93,13 +99,6 @@ legend {
   border-radius: 10px;
   justify-content: center;
   box-shadow: 0 0 1em var(--theme);
-  font-size: 100%;
-
-}
-
-
-.my-span {
-
   font-size: 90%;
 }
 

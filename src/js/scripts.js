@@ -1,5 +1,9 @@
-// $( 'input[class*=value]' ).on( 'keyup', function() {
-//     if( $( this ).val().length !== 11 ) {
-//     if( !/^\d{11}$/.test( $( this ).val() ) ) {
-//         PatientData.hideCWUbDataInformation();
-//         return;
+document.querySelectorAll('.hex').forEach(item => {
+    item.addEventListener('keyup', event => {
+        let regEx = /^[0-9a-fA-F]+$/;
+        let isHex = regEx.test(event.target.value.toString());
+        if (!isHex) {
+            item.value = item.value.slice(0, -1);
+        }
+    })
+})
