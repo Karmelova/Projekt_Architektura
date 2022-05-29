@@ -41,34 +41,44 @@ function listChecker() {
     }
 }
 
+function assignInputValue(list, temp) {
+    switch (list) {
+        case '1':
+            document.querySelector('#ax').value = temp;
+            break;
+        case '2':
+            document.querySelector('#bx').value = temp;
+            break;
+        case '3':
+            document.querySelector('#cx').value = temp;
+            break;
+        case '4':
+            document.querySelector('#dx').value = temp;
+            break;
+        default:
+            break;
+    }
+}
+
 //mov
 document.querySelector('#mov').addEventListener('click', event => {
     querySelector1 = '#mov1';
     querySelector2 = '#mov2';
     listChecker();
     value1 = getRegisterValue(list1);
-    switch (list2) {
-        case '1':
-            document.querySelector('#ax').value = value1;
-            break;
-        case '2':
-            document.querySelector('#bx').value = value1;
-            break;
-        case '3':
-            document.querySelector('#cx').value = value1;
-            break;
-        case '4':
-            document.querySelector('#dx').value = value1;
-            break;
-        default:
-            break;
-    }
+    temp = value1;
+    assignInputValue(list2, temp)
 })
 
 
-
-function xchg() {
-    list1 = document.querySelector('#xchg1').value;
-    list2 = document.querySelector('#xchg2').value;
+document.querySelector('#xchg').addEventListener('click', event => {
+    querySelector1 = '#xchg1';
+    querySelector2 = '#xchg2';
     listChecker();
-}
+    value1 = getRegisterValue(list1);
+    value2 = getRegisterValue(list2);
+    temp = value1;
+    assignInputValue(list2, temp)
+    temp = value2;
+    assignInputValue(list1, temp)
+})
