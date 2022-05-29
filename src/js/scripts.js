@@ -1,3 +1,7 @@
+let list1, list2, querySelector1, querySelector2, value1, value2, temp;
+
+
+
 document.querySelectorAll('.hex').forEach(item => {
     item.addEventListener('keyup', event => {
         let regEx = /^[0-9a-fA-F]+$/;
@@ -7,24 +11,6 @@ document.querySelectorAll('.hex').forEach(item => {
         }
     })
 })
-
-function mov() {
-    document.querySelector('#mov1').style.border = 'none';
-    document.querySelector('#mov2').style.border = 'none';
-
-    const list1 = document.querySelector('#mov1').value;
-    const list2 = document.querySelector('#mov2').value;
-    let value1 = getRegisterValue(list1);
-
-    if (value1 == null) {
-        document.querySelector('#mov1').style.border = 'solid red 1px';
-    }
-    if (list2 === '-- select --') {
-        document.querySelector('#mov2').style.border = 'solid red 1px';
-    }
-
-
-}
 
 function getRegisterValue(event) {
     switch (event) {
@@ -40,4 +26,49 @@ function getRegisterValue(event) {
             return null;
 
     }
+}
+
+function listChecker() {
+    document.querySelector(querySelector1).style.border = 'none';
+    document.querySelector(querySelector2).style.border = 'none';
+    list1 = document.querySelector(querySelector1).value;
+    list2 = document.querySelector(querySelector2).value;
+    if (list1 === '-- select --') {
+        document.querySelector(querySelector1).style.border = 'solid red 1px';
+    }
+    if (list2 === '-- select --') {
+        document.querySelector(querySelector2).style.border = 'solid red 1px';
+    }
+}
+
+//mov
+document.querySelector('#mov').addEventListener('click', event => {
+    querySelector1 = '#mov1';
+    querySelector2 = '#mov2';
+    listChecker();
+    value1 = getRegisterValue(list1);
+    switch (list2) {
+        case '1':
+            document.querySelector('#ax').value = value1;
+            break;
+        case '2':
+            document.querySelector('#bx').value = value1;
+            break;
+        case '3':
+            document.querySelector('#cx').value = value1;
+            break;
+        case '4':
+            document.querySelector('#dx').value = value1;
+            break;
+        default:
+            break;
+    }
+})
+
+
+
+function xchg() {
+    list1 = document.querySelector('#xchg1').value;
+    list2 = document.querySelector('#xchg2').value;
+    listChecker();
 }
