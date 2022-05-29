@@ -54,12 +54,6 @@ body {
   box-shadow: none;
 }
 
-button:focus {
-  border-radius: 10px;
-  box-shadow: 0 0 1em var(--addons);
-  transition: 0.5s;
-
-}
 
 input {
   background-color: transparent;
@@ -103,15 +97,25 @@ legend {
 }
 
 .instruction legend {
-  box-shadow: 0 0 1em var(--dark);
+  box-shadow: 0 0 1em var(--theme);
   background-color: var(--addons);
   color: var(--dark);
+  position: relative;
 }
 
 button {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  border-radius: 10px;
+  width: 100%;
+}
+
+button:focus,
+button:hover {
+  box-shadow: 0 0 1em var(--light);
+  transition: 0.5s;
+
 }
 
 select {

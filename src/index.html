@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../src/css/style.css">
     <title>Processor 8068 </title>
 </head>
 
@@ -19,31 +19,31 @@
         <div class="row">
             <div class="col-12 col-md-6">
                 <section id="registers" class="row">
-                    <div class="register col-12 col-md-6">
+                    <div class="register col-12 col-lg-6">
                         <fieldset>
-                            <legend class="float-none d-flex w-50 text-center p-0">AX</legend>
-                            <input type="text" placeholder="0000" maxlength="4" class="hex">
+                            <legend class="float-none d-flex w-25 text-center p-0">AX</legend>
+                            <input type="text" placeholder="0000" maxlength="4" class="hex" id="ax">
                         </fieldset>
                     </div>
 
-                    <div class="register col-12 col-md-6">
+                    <div class="register col-12 col-lg-6">
                         <fieldset>
-                            <legend class="float-none d-flex w-50 text-center p-0">BX</legend>
-                            <input type="text" placeholder="0000" maxlength="4" class="hex">
+                            <legend class="float-none d-flex w-25 text-center p-0">BX</legend>
+                            <input type="text" placeholder="0000" maxlength="4" class="hex" id="bx">
                         </fieldset>
                     </div>
 
-                    <div class="register col-12 col-md-6">
+                    <div class="register col-12 col-lg-6">
                         <fieldset>
-                            <legend class="float-none d-flex w-50 text-center p-0">CX</legend>
-                            <input type="text" placeholder="0000" maxlength="4" class="hex">
+                            <legend class="float-none d-flex w-25 text-center p-0">CX</legend>
+                            <input type="text" placeholder="0000" maxlength="4" class="hex" id="cx">
                         </fieldset>
                     </div>
 
-                    <div class="register col-12 col-md-6">
+                    <div class="register col-12 col-lg-6">
                         <fieldset>
-                            <legend class="float-none d-flex w-50 text-center p-0">DX</legend>
-                            <input type="text" placeholder="0000" maxlength="4" class="hex">
+                            <legend class="float-none d-flex w-25 text-center p-0">DX</legend>
+                            <input type="text" placeholder="0000" maxlength="4" class="hex" id="dx">
                         </fieldset>
                     </div>
                 </section>
@@ -51,11 +51,12 @@
             </div>
             <div class="col-12 col-md-6">
                 <section class="row">
-                    <div class="instruction col-12 col-md-6 ">
+                    <div class="instruction col-12 col-lg-6 ">
                         <fieldset>
-                            <legend class="float-none d-flex w-50 text-center p-0"><button>MOV</button></legend>
-                            <form action="" class="d-inline-flex w-100">
-                                <select id="MOV1" class="form-select p-0">
+                            <legend class="float-none d-flex w-25 text-center p-0"><button onclick="mov()"
+                                    id="mov">MOV</button></legend>
+                            <form class="d-inline-flex w-100">
+                                <select id="mov1" class="form-select p-0">
                                     <option hidden selected>-- select --</option>
                                     <option value="1">AX</option>
                                     <option value="2">BX</option>
@@ -63,7 +64,7 @@
                                     <option value="4">DX</option>
                                 </select>
 
-                                <select id="MOV2" class="form-select p-0">
+                                <select id="mov2" class="form-select p-0">
                                     <option hidden selected>-- select --</option>
                                     <option value="1">AX</option>
                                     <option value="2">BX</option>
@@ -74,18 +75,19 @@
 
                         </fieldset>
                     </div>
-                    <div class="instruction col-12 col-md-6">
+                    <div class="instruction col-12 col-lg-6">
                         <fieldset>
-                            <legend class="float-none d-flex w-50 text-center p-0"><button>XCHG</button></legend>
-                            <form action="" class="d-inline-flex w-100">
-                                <select id="XCHG1" class="form-select p-0">
+                            <legend class="float-none d-flex w-25 text-center p-0"><button id="xchg">XCHG</button>
+                            </legend>
+                            <form class="d-inline-flex w-100">
+                                <select id="xchg1" class="form-select p-0">
                                     <option hidden selected>-- select --</option>
                                     <option value="1">AX</option>
                                     <option value="2">BX</option>
                                     <option value="3">CX</option>
                                     <option value="4">DX</option>
                                 </select>
-                                <select id="XCHG2" class="form-select p-0">
+                                <select id="xchg2" class="form-select p-0">
                                     <option hidden selected>-- select --</option>
                                     <option value="1">AX</option>
                                     <option value="2">BX</option>
@@ -97,18 +99,19 @@
                     </div>
 
 
-                    <div class="instruction col-12 col-md-6">
+                    <div class="instruction col-12 col-lg-6">
                         <fieldset>
-                            <legend class="float-none d-flex w-50 text-center p-0 "><button><span class="mw-100">PUSH</button></legend>
-                            <form action="" class="d-inline-flex w-100">
-                                <select id="PUSH1" class="form-select p-0">
-                                    <option hidden value="0" >-- select --</option>
+                            <legend class="float-none d-flex w-25 text-center p-0 "><button id="push">PUSH</button>
+                            </legend>
+                            <form class="d-inline-flex w-100">
+                                <select id="push1" class="form-select p-0">
+                                    <option hidden value="0">-- select --</option>
                                     <option value="1">AX</option>
                                     <option value="2">BX</option>
                                     <option value="3">CX</option>
                                     <option value="4">DX</option>
                                 </select>
-                                <select id="PUSH2" class="form-select p-0">
+                                <select id="push2" class="form-select p-0">
                                     <option hidden value="0">-- select --</option>
                                     <option value="1">AX</option>
                                     <option value="2">BX</option>
@@ -119,18 +122,19 @@
                         </fieldset>
                     </div>
 
-                    <div class="instruction col-12 col-md-6">
+                    <div class="instruction col-12 col-lg-6">
                         <fieldset>
-                            <legend class="float-none d-flex w-50 text-center p-0"><button>POP</button></legend>
-                            <form action="" class="d-inline-flex w-100">
-                                <select id="POP1" class="form-select p-0">
+                            <legend class="float-none d-flex w-25 text-center p-0"><button id="pop">POP</button>
+                            </legend>
+                            <form class="d-inline-flex w-100">
+                                <select id="pop1" class="form-select p-0">
                                     <option hidden value="0">-- select --</option>
                                     <option value="1">AX</option>
                                     <option value="2">BX</option>
                                     <option value="3">CX</option>
                                     <option value="4">DX</option>
                                 </select>
-                                <select id="POP2" class="form-select p-0">
+                                <select id="pop2" class="form-select p-0">
                                     <option hidden value="0">-- select --</option>
                                     <option value="1">AX</option>
                                     <option value="2">BX</option>
@@ -141,6 +145,7 @@
                         </fieldset>
                     </div>
                 </section>
+                <span id="test"></span>
             </div>
         </div>
     </main>
