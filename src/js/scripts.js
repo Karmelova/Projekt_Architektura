@@ -70,7 +70,7 @@ document.querySelector('#mov').addEventListener('click', event => {
     assignInputValue(list2, temp)
 })
 
-
+//xchg
 document.querySelector('#xchg').addEventListener('click', event => {
     querySelector1 = '#xchg1';
     querySelector2 = '#xchg2';
