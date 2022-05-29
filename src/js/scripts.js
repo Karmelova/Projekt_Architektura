@@ -14,20 +14,19 @@ function mov() {
 
     const list1 = document.querySelector('#mov1').value;
     const list2 = document.querySelector('#mov2').value;
-    let value1 = getRegister(list1);
-    let value2 = getRegister(list2);
+    let value1 = getRegisterValue(list1);
 
     if (value1 == null) {
         document.querySelector('#mov1').style.border = 'solid red 1px';
     }
-    if (value2 == null) {
+    if (list2 === '-- select --') {
         document.querySelector('#mov2').style.border = 'solid red 1px';
     }
 
-    
+
 }
 
-function getRegister(event) {
+function getRegisterValue(event) {
     switch (event) {
         case '1':
             return document.querySelector('#ax').value;
